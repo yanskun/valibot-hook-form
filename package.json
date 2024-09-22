@@ -11,10 +11,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@hookform/resolvers": "3.9.0",
     "next": "^14.2.13",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-hook-form": "7.53.0"
+    "react-hook-form": "7.53.0",
+    "valibot": "^0.42.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",

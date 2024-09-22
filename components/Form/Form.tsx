@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { valibotResolver } from "@hookform/resolvers/valibot";
+import * as v from "valibot";
 
 enum GenderEnum {
   female = "female",
@@ -7,13 +9,21 @@ enum GenderEnum {
   other = "other",
 }
 
-interface IFormInput {
-  firstName: string;
-  gender: GenderEnum;
-}
+const schema = v.object({
+  firstName: v.pipe(
+    v.string(),
+    v.minLength(2, "First name must be at least 2 characters"),
+    v.maxLength(20, "First name must be at most 20 characters")
+  ),
+  gender: v.enum(GenderEnum),
+});
+
+type IFormInput = v.InferInput<typeof schema>;
 
 export function Form() {
-  const { register, handleSubmit } = useForm<IFormInput>();
+  const { register, handleSubmit } = useForm<IFormInput>({
+    resolver: valibotResolver(schema),
+  });
   const onSubmit: SubmitHandler<IFormInput> = (data) => setFormData(data);
 
   const [formData, setFormData] = useState<IFormInput>();
