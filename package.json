@@ -12,28 +12,28 @@
   },
   "dependencies": {
     "@hookform/resolvers": "3.9.0",
-    "next": "^14.2.13",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "next": "14.2.13",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-hook-form": "7.53.0",
-    "valibot": "^0.42.1"
+    "valibot": "0.42.1"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.9.0",
-    "@storybook/addon-essentials": "^8.3.2",
-    "@storybook/addon-interactions": "^8.3.2",
-    "@storybook/addon-links": "^8.3.2",
-    "@storybook/addon-onboarding": "^8.3.2",
-    "@storybook/blocks": "^8.3.2",
-    "@storybook/nextjs": "^8.3.2",
-    "@storybook/react": "^8.3.2",
-    "@storybook/test": "^8.3.2",
+    "@chromatic-com/storybook": "1.9.0",
+    "@storybook/addon-essentials": "8.3.2",
+    "@storybook/addon-interactions": "8.3.2",
+    "@storybook/addon-links": "8.3.2",
+    "@storybook/addon-onboarding": "8.3.2",
+    "@storybook/blocks": "8.3.2",
+    "@storybook/nextjs": "8.3.2",
+    "@storybook/react": "8.3.2",
+    "@storybook/test": "8.3.2",
     "@types/node": "22.5.5",
     "@types/react": "18.3.8",
     "@types/react-dom": "18.3.0",
     "postcss": "8.4.47",
-    "storybook": "^8.3.2",
+    "storybook": "8.3.2",
     "tailwindcss": "3.4.12",
-    "typescript": "5.6.2"
+    "typescript": "5.4.5"
   }
 }
