@@ -12,16 +12,13 @@ export function Form() {
   });
   const { register, handleSubmit } = formMethods;
 
-  const [formData, setFormData] = useState<IFormInput>();
+  const [formData, setFormData] = useState<{ name: string }>();
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     setFormData({
-      ...data,
-      name: {
-        ...data.name,
-        firstName: data.name.firstName.toUpperCase(),
-        lastName: data.name.lastName.toUpperCase(),
-      },
+      name: data.isJapanese
+        ? `${data.name.lastName} ${data.name.firstName}`
+        : `${data.name.firstName} ${data.name.lastName}`,
     });
   };
   return (
